@@ -6,7 +6,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("page.html")
+	t, err := template.ParseFiles("templates/page.html")
 	if err != nil {
 		panic(err)
 	}
