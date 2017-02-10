@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    env_file: 
+      - hello.env
+      - compose.env
+    ports:
+      - "8080:8080"
+  postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
