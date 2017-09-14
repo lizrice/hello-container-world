@@ -1,12 +1,12 @@
 pipeline {
   agent {
     dockerfile {
-      filename 'Dockerfile'
+      filename 'Example2/Dockerfile'
     }
     
   }
   stages {
-    stage('Thing') {
+    stage('Say something') {
       steps {
         echo 'Saying hello'
       }
