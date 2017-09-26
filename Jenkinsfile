@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent any 
   
   stages {
     
@@ -26,8 +26,9 @@ pipeline {
 
     
     stage('Build image') {
+      agent { dockerfile { dir 'Example1' } }  
       steps {
-        def app = docker.build("lizrice/hello-container-world/Example1")
+        echo 'Built something'
       }
     }
 
