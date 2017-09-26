@@ -24,11 +24,12 @@ pipeline {
       }
     }
 
-    /*
+    
     stage('Build image') {
         app = docker.build("lizrice/hello-container-world/Example1")
     }
 
+    /* 
     stage('Test image') {
         app.inside {
             sh 'echo "Tests passed"'
