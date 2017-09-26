@@ -1,5 +1,9 @@
 pipeline {
-  agent none
+  agent { 
+    node { 
+      label 'docker'
+    }
+  }
   
   stages {
     
@@ -7,6 +11,12 @@ pipeline {
       /* def app */ 
       steps {
         echo 'Saying hello'
+      }
+    }
+    
+    stage ('Checkout Code') {
+      steps {
+        checkout scm
       }
     }
     
