@@ -27,7 +27,7 @@ pipeline {
     
     stage('Build image') {
       steps {
-        docker.build("lizrice/hello-container-world/Example1")
+        def app = docker.build("lizrice/hello-container-world/Example1")
       }
     }
 
