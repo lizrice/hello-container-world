@@ -9,13 +9,14 @@ pipeline {
       }
     }
     
+    /* 
     stage ('Verify Tools'){
       steps {
         parallel (
           docker: { sh "docker -v" }
         )
       }
-    }    
+    }  */   
     
     stage ('Checkout Code') {
       steps {
