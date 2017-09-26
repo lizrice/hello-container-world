@@ -4,7 +4,7 @@ pipeline {
   stages {
     
     stage('Say something') {
-      def app 
+      /* def app */ 
       steps {
         echo 'Saying hello'
       }
