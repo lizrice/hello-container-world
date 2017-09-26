@@ -3,9 +3,8 @@ pipeline {
   
   stages {
     
-    def app 
-    
     stage('Say something') {
+      def app 
       steps {
         echo 'Saying hello'
       }
