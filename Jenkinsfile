@@ -8,20 +8,23 @@ pipeline {
   stages {
     
     stage('Say something') {
-      /* def app */ 
       steps {
         echo 'Saying hello'
       }
     }
     
+    stage ('Verify Tools'){
+      steps {
+        parallel (
+          docker: { sh "docker -v" }
+        )
+      }
+    }    
+    
     stage ('Checkout Code') {
       steps {
         checkout scm
       }
-    }
-    
-    /* stage('Clone repository') {
-        checkout scm
     }
 
     stage('Build image') {
